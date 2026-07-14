@@ -81,6 +81,10 @@ exports.login = catchAsyncErrors(async (req, res, next) => {
 
 // Protect Route
 exports.protect = catchAsyncErrors(async (req, res, next) => {
+  console.log("===== AUTH DEBUG =====");
+console.log("Cookies:", req.cookies);
+console.log("Headers Cookie:", req.headers.cookie);
+console.log("Authorization:", req.headers.authorization);
 
   let token;
 
