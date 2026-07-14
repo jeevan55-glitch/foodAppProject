@@ -8,6 +8,8 @@ const dotenv = require("dotenv");
 
 //setting up config file
 dotenv.config({ path: "./config/config.env" });
+console.log("Stripe Key:", process.env.STRIPE_SECRET_KEY ? "FOUND" : "NOT FOUND");
+
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 // Create a new order   =>  /api/v1/order/new
