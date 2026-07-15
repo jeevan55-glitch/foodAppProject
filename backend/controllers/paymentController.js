@@ -83,7 +83,7 @@ exports.processPayment = catchAsyncErrors(async (req, res, next) => {
       ],
 
       success_url: `${process.env.FRONTEND_URL}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.FRONTEND_URL}cart`,
+      cancel_url: `${process.env.FRONTEND_URL}/cart`,
     });
 
     console.log("Stripe Session Created:", session.id);
