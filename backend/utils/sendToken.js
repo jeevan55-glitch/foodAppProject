@@ -14,7 +14,10 @@ const sendToken = (user, statusCode, res) => {
   sameSite: "none",
 };
 
-  res.cookie("jwt", token, cookieOptions);
+  res.cookie("jwt", token, {
+    ...cookieOptions,
+  path: "/",
+});
 
   user.password = undefined;
 
