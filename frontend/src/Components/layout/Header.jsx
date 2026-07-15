@@ -6,6 +6,8 @@ import "../../App.css";
 
 const Header = () => {
   const { cartItems } = useSelector((state) => state.cart);
+  const { cartItems } = useSelector((state) => state.cart);
+const { isAuthenticated } = useSelector((state) => state.user);
   return (
     <>
       <nav className="navbar row sticky-top">
@@ -44,7 +46,8 @@ const Header = () => {
           
           </Link>
 
-              <Link to="/me" className="material-symbols-outlined web_logo" >  
+              <Link to={isAuthenticated ? "/me" : "/login"} 
+              className="material-symbols-outlined web_logo" >  
            account_circle
               </Link>
             
