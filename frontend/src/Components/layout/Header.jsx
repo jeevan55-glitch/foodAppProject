@@ -6,7 +6,6 @@ import "../../App.css";
 
 const Header = () => {
   const { cartItems } = useSelector((state) => state.cart);
-  const { cartItems } = useSelector((state) => state.cart);
 const { isAuthenticated } = useSelector((state) => state.user);
   return (
     <>

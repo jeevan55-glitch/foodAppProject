@@ -50,6 +50,7 @@ const Signup = () => {
     };
 
     dispatch(register(userData));
+    console.log("Submitting:", userData);
   };
 
   return (
