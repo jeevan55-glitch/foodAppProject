@@ -10,6 +10,7 @@ import Footer from "./Components/layout/Footer";
 import Cart from "./Components/Cart";
 import Login from "./Components/Login"
 import Profile from "./Components/Profile"
+import Signup from "./Components/Signup";
 import { useDispatch } from "react-redux";
 import { loadUser } from "./redux/actions/userActions";
 import { fetchCartItems } from "./redux/actions/cartActions";
@@ -48,6 +49,7 @@ useEffect(() => {
               <Route path="/success" element={<Success />} />
               <Route path="/payment" element={<Payment />} />
               <Route path="/orders" element={<Orders />} />
+              <Route path="/users/signup" element={<Signup />} />
 
               
             </Routes>

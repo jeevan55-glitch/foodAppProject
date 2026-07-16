@@ -16,7 +16,7 @@ const bcrypt = require("bcryptjs")
         name:{
             type: String,
             required:[true,"please enter your name"],
-            maxlenth:[30,"Name cannot exceed 30 characters"]
+            maxlength:[30,"Name cannot exceed 30 characters"]
         },
         email:{
             type: String,
@@ -56,7 +56,7 @@ const bcrypt = require("bcryptjs")
             url: String,
         },
         passwordChangedAt: Date,
-        passwordREsetToken: String,
+        passwordResetToken: String,
         passwordResetExpires: Date
     },
     {timestamps:true}

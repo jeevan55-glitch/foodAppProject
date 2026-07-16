@@ -38,6 +38,11 @@ exports.signup = catchAsyncErrors(async (req, res, next) => {
       url: result.secure_url,
     };
   }
+  const existingUser = await User.findOne({ email });
+
+if (existingUser) {
+    return next(new ErrorHandler("User already exists with this email", 400));
+}
 
   const user = await User.create({
     name,
